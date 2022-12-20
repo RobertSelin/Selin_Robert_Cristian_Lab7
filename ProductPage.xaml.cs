@@ -42,10 +42,11 @@ public partial class ProductPage : ContentPage
 				ShopListID = sl.ID,
 				ProductID = p.ID
 			};
-			await App.Database.SaveListProductAsync(lp);
 
+			await App.Database.SaveListProductAsync(lp);
 			p.ListProducts = new List<ListProduct> { lp };
 			await Navigation.PopAsync();
 		}
+
 	}
 }

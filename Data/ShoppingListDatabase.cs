@@ -81,16 +81,17 @@ namespace Selin_Robert_Cristian_Lab7.Data
             else
             {
                 return _database.InsertAsync(listp);
-            }    
+            }
         }
 
-        public Task<List<Product>> GetListProductAsync(int shoplistid)
+        public Task<List<Product>> GetListProductsAsync(int shoplistid)
         {
             return _database.QueryAsync<Product>(
-                "select P.ID, P.Description from Product P"
-                + " inner join ListProduct LP"
-                + " on P.ID = LP.ProductID where LP.ShopListID = ?",
-                shoplistid);
+            "select P.ID, P.Description from Product P"
+            + " inner join ListProduct LP"
+            + " on P.ID = LP.ProductID where LP.ShopListID = ?",
+            shoplistid);
         }
+
     }
 }

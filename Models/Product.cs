@@ -18,4 +18,5 @@ namespace Selin_Robert_Cristian_Lab7.Models
         [OneToMany]
         public List<ListProduct> ListProducts { get; set; }
     }
+
 }

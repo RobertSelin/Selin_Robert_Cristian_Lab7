@@ -8,6 +8,7 @@ using SQLiteNetExtensions.Attributes;
 
 namespace Selin_Robert_Cristian_Lab7.Models
 {
+
     public class ListProduct
     {
         [PrimaryKey, AutoIncrement]
